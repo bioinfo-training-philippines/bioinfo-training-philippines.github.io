@@ -4,6 +4,20 @@
 
 **Manila, Philippines 15-19 April 2024**
 
+## Precourse Material
+
+Optional Videos to watch before the course start:
+- [Introduction to Galaxy](https://www.youtube.com/watch?v=64oS5uXVRV0)
+- [Introduction to Genome Assembly](https://youtu.be/-EX_G1griZE?si=iQMFxHw7OJtg-VbD)
+- [Introduction to NGS Mapping](https://www.youtube.com/watch?v=zuRF_uPTY-Q)
+- [Introduction to InSaFlu](https://youtu.be/8AGaNrCGmtI?si=bYhk5-lFBGjaEAQF)
+- [A brief history of Computional Biology and Sequencing](https://youtu.be/idl6oq-MxbM?si=A3ShRWdwoVkjgXqk&t=575)
+
+Optional Publication to read:
+- [Twenty years of bacterial genome sequencing](https://www.nature.com/articles/nrmicro3565) - Discusses the history of sequencing technology
+- [So you want to be a computational biologist?](https://www.nature.com/articles/nbt.2740) - Advice by two bioinformaticians
+- [A primer on sequencing technology](https://www.nature.com/articles/nrg2626) - In depth review of sequencing technology
+
 ## Day 1
 
 | **Mon** | **Activities** |     | **Speaker** |     |
