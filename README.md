@@ -1,11 +1,10 @@
 # Bioinformatics Analysis Course for SARS-CoV-2 and Influenza
 
-
 Manila, Philippines 15-19 April 2024
 
-Training Server: https://usegalaxy.org.au/join-training/bioinfo-philippines
+📣📣 **Training Server - Use this link for the duration of the training course:** https://usegalaxy.org.au/join-training/bioinfo-philippines 📣📣
 
-## Precourse Material
+## 🗒️ Precourse Material - Read at your leisure 
 
 Optional Videos to watch before the course start:
 - [Introduction to Galaxy](https://www.youtube.com/watch?v=64oS5uXVRV0)
@@ -20,7 +19,7 @@ Optional Publication to read:
 - [A primer on sequencing technology](https://www.nature.com/articles/nrg2626) - In depth review of sequencing technology
 
 ---
-## Precourse requirements
+## 🛠️ Requirements - Please signup before the course!
 
 Before the start of the course, please create an account (using your institutional email address) for the follow web services (free):
 
@@ -35,7 +34,7 @@ Please also download the following programs and install on your laptop:
 
 ---
 
-## Day 1
+## Day 1 
 
 | **Mon** | **Activities** |     | **Speaker** |     |
 |---|---|---|---|---|
