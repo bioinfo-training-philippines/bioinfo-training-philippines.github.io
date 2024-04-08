@@ -1,8 +1,9 @@
-# bioinfo-training-philippines
+# Bioinformatics Analysis Course for SARS-CoV-2 and Influenza
 
-**Bioinformatics Analysis Course for SARS-CoV-2 and Influenza**
 
-**Manila, Philippines 15-19 April 2024**
+Manila, Philippines 15-19 April 2024
+
+Training Server: https://usegalaxy.org.au/join-training/bioinfo-philippines
 
 ## Precourse Material
 
@@ -17,6 +18,22 @@ Optional Publication to read:
 - [Twenty years of bacterial genome sequencing](https://www.nature.com/articles/nrmicro3565) - Discusses the history of sequencing technology
 - [So you want to be a computational biologist?](https://www.nature.com/articles/nbt.2740) - Advice by two bioinformaticians
 - [A primer on sequencing technology](https://www.nature.com/articles/nrg2626) - In depth review of sequencing technology
+
+---
+## Precourse requirements
+
+Before the start of the course, please create an account (using your institutional email address) for the follow web services (free):
+
+- [INSaFlu](https://insaflu.insa.pt/accounts/register/) 
+- [Galaxy](https://usegalaxy.org.au/login/start) Click `Register here` button down the bottom
+- [GISAID](https://gisaid.org/register/)
+- [NCBI](https://account.ncbi.nlm.nih.gov/signup/) Select `more signup options`, search for your institution.
+
+Please also download the following programs and install on your laptop:
+
+- TBA
+
+---
 
 ## Day 1
 
