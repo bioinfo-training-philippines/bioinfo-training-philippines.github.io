@@ -1,5 +1,3 @@
-## 📣📣 **[Training Server - Use this link for the duration of the training course](https://usegalaxy.org.au/join-training/bioinfo-philippines)** 📣📣
-
 ## 🗒️ Precourse Material - Read at your leisure 
 
 Optional Videos to watch before the course start:
