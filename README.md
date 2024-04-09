@@ -1,8 +1,4 @@
-# Bioinformatics Analysis Course for SARS-CoV-2 and Influenza
-
-Manila, Philippines 15-19 April 2024
-
-📣📣 **[Training Server - Use this link for the duration of the training course](https://usegalaxy.org.au/join-training/bioinfo-philippines)** 📣📣
+## 📣📣 **[Training Server - Use this link for the duration of the training course](https://usegalaxy.org.au/join-training/bioinfo-philippines)** 📣📣
 
 ## 🗒️ Precourse Material - Read at your leisure 
 
