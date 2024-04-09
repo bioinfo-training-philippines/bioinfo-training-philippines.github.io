@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
 title: Bioinformatics Analysis Course for SARS-CoV-2 and Influenza
-# logo: /assets/img/logo.png
+logo: /logo.png
 description: Manila, Philippines 15-19 April 2024.
 # show_downloads: true
 google_analytics:
