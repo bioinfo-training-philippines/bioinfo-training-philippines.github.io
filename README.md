@@ -35,7 +35,7 @@ Please also download the following programs and install on your laptop:
 | 08:30 am | Registration                                          |                    |
 | 09:00 am | Welcome Remarks                                       | Rui Paulo de Jesus |
 |          | Introduction of participants                          |                    |
-|          | Overview of training course                           | Clyde Dapat        |
+|          | [Overview of training course](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/0bcb950d589a0705b288398af5c883f27f1604c4/presentations/0-Overview.pdf)                           | Clyde Dapat        |
 |          | Group photo                                           |                    |
 | 10:30 am | Break                                                 |                    |
 | 11:00 am | Pre-course quiz                                       |                    |
