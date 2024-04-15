@@ -111,3 +111,6 @@ Please also download the following programs and install on your laptop:
 | 04:30 pm | Awarding of certificates                     |                    |
 | 05:00 pm | Closing remarks                              | Rui Paulo de Jesus |
 
+## Other resources:
+
+- Benchmarking reveals superiority of deep learning variant callers on bacterial nanopore sequence data, [https://doi.org/10.1101/2024.03.15.585313](https://doi.org/10.1101/2024.03.15.585313)
