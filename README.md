@@ -53,7 +53,7 @@ Please also download the following programs and install on your laptop:
 | Time     | Activities                                           | Speaker         |
 |----------|------------------------------------------------------|-----------------|
 | 09:00 am | [Lecture 4: Principles of genome assembly](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_4-1_Genome_Assembly.pdf)            | Ammar Aziz      |
-| 09:30 am | Tutorial: Influenza genome assembly with INSaFLU    | Ammar Aziz      |
+| 09:30 am | [Tutorial: Influenza genome assembly with INSaFLU](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_4-2_Genome_Assembly_Insaflu.pdf)    | Ammar Aziz      |
 | 10:30 am | Break                                                |                 |
 | 11:00 am | Hands-on: Influenza genome assembly with INSaFLU    | Ammar Aziz      |
 | 12:30 pm | Lunch                                                |                 |
