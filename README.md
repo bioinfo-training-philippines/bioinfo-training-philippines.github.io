@@ -39,7 +39,7 @@ Please also download the following programs and install on your laptop:
 |          | Group photo                                           |                    |
 | 10:30 am | Break                                                 |                    |
 | 11:00 am | Pre-course quiz                                       |                    |
-| 11:30 am | Lecture 1: Genomic surveillance of Influenza and SARS-CoV-2 | Clyde Dapat |
+| 11:30 am | [Lecture 1: Genomic surveillance of Influenza and SARS-CoV-2](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_1_Genomic_surveillance.pdf) | Clyde Dapat |
 | 12:30 pm | Lunch                                                 |                    |
 | 01:30 pm | Lecture 2: NGS data analysis                          | Francis Tablizo    |
 | 02:00 pm | Lecture 3: Quality control of NGS data                | Francis Tablizo    |
