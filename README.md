@@ -41,8 +41,8 @@ Please also download the following programs and install on your laptop:
 | 11:00 am | Pre-course quiz                                       |                    |
 | 11:30 am | [Lecture 1: Genomic surveillance of Influenza and SARS-CoV-2](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_1_Genomic_surveillance.pdf) | Clyde Dapat |
 | 12:30 pm | Lunch                                                 |                    |
-| 01:30 pm | Lecture 2: NGS data analysis                          | Francis Tablizo    |
-| 02:00 pm | Lecture 3: Quality control of NGS data                | Francis Tablizo    |
+| 01:30 pm | [Lecture 2: NGS data analysis](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_2_NGS_Data_Analysis.pdf)                          | Francis Tablizo    |
+| 02:00 pm | [Lecture 3: Quality control of NGS data](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_3_NGS_Data_QC.pdf)                | Francis Tablizo    |
 | 02:30 pm | Break                                                 |                    |
 | 03:00 pm | Hands-on: Quality control with FastQC                 | Francis Tablizo    |
 | 05:00 pm | Wrap up                                               |                    |
