@@ -24,7 +24,7 @@ Before the start of the course, please create an account (using your institution
 
 Please also download the following programs and install on your laptop:
 
-- TBA
+- [MEGA](https://www.megasoftware.net/)
 
 ---
 
