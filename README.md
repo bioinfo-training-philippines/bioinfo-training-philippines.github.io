@@ -68,7 +68,7 @@ Please also download the following programs and install on your laptop:
 
 | Time     | Activities                                            | Speaker               |
 |----------|-------------------------------------------------------|-----------------------|
-| 09:00 am | Lecture 5: QC on consensus sequences generated        | John Michael Egana    |
+| 09:00 am | [Lecture 5: QC on consensus sequences generated](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_5_QC_on_Consensus.pdf)        | John Michael Egana    |
 | 10:30 am | Break                                                 |                       |
 | 11:00 am | Hands-on: QC on consensus sequences generated         | John Michael Egana    |
 | 12:30 pm | Lunch                                                 |                       |
