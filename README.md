@@ -75,7 +75,7 @@ Please also download the following programs and install on your laptop:
 | 01:00 pm | Lecture 6: Online tools (Nextstrain, Nextclade)       | Ammar Aziz            |
 | 01:30 pm | Hands-on: Online tools (Nextstrain, Nextclade)        | Ammar Aziz            |
 | 02:30 pm | Break                                                 |                       |
-| 03:30 pm | Lecture 7: Online tools (FluSurver, CoVsurver)        | Clyde Dapat           |
+| 03:30 pm | [Lecture 7: Online tools (FluSurver, CoVsurver) ](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_7_Flusurver_compressed.pdf)       | Clyde Dapat           |
 | 04:00 pm | Hands-on: Online tools (FluSurver, CovSurver)         | Clyde Dapat           |
 | 05:00 pm | Wrap up                                               |                       |
 
