@@ -57,8 +57,8 @@ Please also download the following programs and install on your laptop:
 | 10:30 am | Break                                                |                 |
 | 11:00 am | Hands-on: Influenza genome assembly with INSaFLU    | Ammar Aziz      |
 | 12:30 pm | Lunch                                                |                 |
-| 01:30 pm | Lecture 4a: Genome assembly with Galaxy             | Wytamma Wirth   |
-| 02:00 pm | Hands-on: SARS-CoV-2 genome assembly with Galaxy    | Wytamma Wirth   |
+| 01:30 pm | [Lecture 4a: Genome assembly with Galaxy ](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_4-3_Genome_Assembly_Galaxy.pdf.zip)            | Wytamma Wirth   |
+| 02:00 pm | [Hands-on: SARS-CoV-2 genome assembly with Galaxy](https://excalidraw.com/#room=299e2c29cc94efa7a840,ZmMMDA5qtCoe-JIySalBnA)    | Wytamma Wirth   |
 | 03:00 pm | Break                                                |                 |
 | 03:30 pm | Hands-on: SARS-CoV-2 genome assembly with Galaxy    | Wytamma Wirth   |
 | 05:00 pm | Wrap up                                              |                 |
