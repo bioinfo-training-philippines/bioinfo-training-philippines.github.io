@@ -72,7 +72,7 @@ Please also download the following programs and install on your laptop:
 | 10:30 am | Break                                                 |                       |
 | 11:00 am | Hands-on: QC on consensus sequences generated         | John Michael Egana    |
 | 12:30 pm | Lunch                                                 |                       |
-| 01:00 pm | Lecture 6: Online tools (Nextstrain, Nextclade)       | Ammar Aziz            |
+| 01:00 pm | [Lecture 6: Online tools (Nextstrain, Nextclade) ](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_6_Nextstrain.pdf)      | Ammar Aziz            |
 | 01:30 pm | Hands-on: Online tools (Nextstrain, Nextclade)        | Ammar Aziz            |
 | 02:30 pm | Break                                                 |                       |
 | 03:30 pm | [Lecture 7: Online tools (FluSurver, CoVsurver) ](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_7_Flusurver_compressed.pdf)       | Clyde Dapat           |
