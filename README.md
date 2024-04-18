@@ -28,6 +28,12 @@ Please also download the following programs and install on your laptop:
 
 ---
 
+## Post Training Evaluation
+
+Please complete the [survey located at this link.](https://forms.office.com/pages/responsepage.aspx?id=_BUzU5Dr2kCx3ER5UBsYezbQtPGY7QtFm0Ab78vNnbRUNVVNUFpJVzJZU1dMSzU0SjFMUDVYM0lNTi4u&origin=lprLink)
+
+---
+
 ## Day 1 - 2024-04-15
 
 | Time     | Activities                                            | Speaker            |
