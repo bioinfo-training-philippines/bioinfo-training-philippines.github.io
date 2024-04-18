@@ -89,7 +89,7 @@ Please also download the following programs and install on your laptop:
 | 10:30 am | [Lecture 9: Phylogenetics analysis](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_9_Phylogenetics.pdf)                 | Wytamma Wirth              |
 | 11:00 am |                                                    |                            |
 | 12:30 pm | Lunch                                              |                            |
-| 01:30 pm | Hands-on: Phylogenetics analysis                  | Wytamma Wirth              |
+| 01:30 pm | [Hands-on: Phylogenetics analysis](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/data/Influenza_A_H3N2_HA.fasta)                  | Wytamma Wirth              |
 | 02:30 pm | Break                                              |                            |
 | 03:00 pm | Hands-on: Phylogenetics analysis                  | Wytamma Wirth              |
 | 05:00 pm | Wrap up                                            |                            |
