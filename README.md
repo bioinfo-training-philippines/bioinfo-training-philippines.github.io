@@ -86,7 +86,7 @@ Please also download the following programs and install on your laptop:
 | 09:00 am | [Lecture 8: Genetic databases (GenBank, GISAID)](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_8_Genetic_Databases..pdf)    | Renato Jacinto Mantaring   |
 | 09:30 am | Hands-on: Accessing sequences on GISAID, NCBI     | Renato Jacinto Mantaring   |
 | 10:00 am | Break                                              |                            |
-| 10:30 am | Lecture 9: Phylogenetics analysis                 | Wytamma Wirth              |
+| 10:30 am | [Lecture 9: Phylogenetics analysis](https://github.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/raw/main/presentations/Lecture_9_Phylogenetics.pdf)                 | Wytamma Wirth              |
 | 11:00 am |                                                    |                            |
 | 12:30 pm | Lunch                                              |                            |
 | 01:30 pm | Hands-on: Phylogenetics analysis                  | Wytamma Wirth              |
