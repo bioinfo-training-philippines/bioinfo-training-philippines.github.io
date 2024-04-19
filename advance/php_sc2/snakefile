@@ -1,3 +1,6 @@
+# to run this pipeline:
+# snakemake -j 4 --use-conda
+
 # improt Path function from model 'pathlib'
 # Path function makes working with paths very easy!
 from pathlib import Path
