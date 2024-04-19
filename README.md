@@ -105,7 +105,7 @@ Please complete the [survey located at this link.](https://forms.office.com/page
 
 | Time     | Activities                                   | Speaker            |
 |----------|----------------------------------------------|--------------------|
-| 09:00 am | Lecture 10: Uploading sequences to GISAID   | Clyde Dapat        |
+| 09:00 am | [Lecture 10: Uploading sequences to GISAID](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Lecture_10_Uploading_sequences_to_GISAID_small.pdf)   | Clyde Dapat        |
 | 09:30 am | Hands-on: Uploading sequences to GISAID     | Clyde Dapat        |
 | 10:00 am | Break                                        |                    |
 | 10:30 am | [Case study](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Case_study.pdf)                                   |                    |
