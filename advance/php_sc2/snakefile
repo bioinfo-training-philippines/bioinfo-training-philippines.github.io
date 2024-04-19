@@ -1,0 +1,263 @@
+# improt Path function from model 'pathlib'
+# Path function makes working with paths very easy!
+from pathlib import Path
+
+#conda config --set channel_priority strict
+
+# below we define global variables that will be used throughout the pipeline
+INDIR = Path("input")
+OUTDIR = Path("output")
+RESOURCES = Path("resources")
+REFERENCE_GENOME = RESOURCES / "SARS-CoV-2.fasta"
+BEDFILE = RESOURCES / "nCoV-2019.bed"
+ANNOTATIONS = RESOURCES / "SARS-CoV-2.gff3"
+BACKBONE = RESOURCES / "sc2.refset.fasta"
+META = INDIR / "metadata.tsv"
+
+# glob_wildcards is a special snakemake function that helpes with extracting patterns
+# from text. We use globa_wildcards to extract the sample name (eg PHIL1234_S1) and 
+# the reads (R1, R2). The pattern we are matching is: {SAMPLE_NAME}_{LANE}_{READ}.fastq.gz
+# We only want te SAMPLE names for this pipeline
+NAMES, READS = glob_wildcards(INDIR / "{name}_{reads}.gz") # check this
+
+# set removes duplicate sample names created from R1/R2 files
+# Snakemake files are actually python files with special syntax
+# Anything python has, we can use.
+SAMPLES = set(NAMES)
+
+# another way to do the above
+# requires manual creation of the input
+# with open(OUTDIR / "names.txt", "r") as f:
+# 	SAMPLES = f.readlines()	
+
+# The 'all' rule is required to generate the final outputs.
+# Remember snakemake works bottom-up - it inspects the outputs of this rule to decide how to 
+# Run the pipeline. The wildcards used in rule 'all' are very important.
+rule all:
+	input:
+		expand(OUTDIR / "quality" / "{sample}.json", sample=SAMPLES),
+		OUTDIR / "run_statistics.html",
+		expand(OUTDIR / "index" / "sc2.index.{ext}", ext = ['amb', 'ann', 'bwt', 'pac', 'sa']),
+		expand(OUTDIR / "mapping" / "{sample}.bam", sample=SAMPLES),
+		expand(OUTDIR / "trimmed" / "{sample}.trim.bam", sample=SAMPLES),
+		expand(OUTDIR / "consensus" / "{sample}.fa", sample=SAMPLES),
+		OUTDIR / "phylogeny" / "aligned.fasta",
+		OUTDIR / "phylogeny" / "tree.newick"
+	
+# The input, output, shell (or run) directives are standard for most rules
+# optional directives: thread, params (for optional values), config, and many more
+# We have completed this rule for you as an example.
+rule fastp:
+	# Message is optional, this will be printed to the terminal
+	# not the use of {} to define snakemake wildcards
+	message: "Running fastp on {wildcards.sample}"
+	# input directive defines the inputs. We use the wildcard {sample}
+	# which snakemake will fill for us. inputs can be named or unnamed.
+	input:
+		R1 = INDIR / "{sample}_R1.fastq.gz",
+		R2 = INDIR / "{sample}_R2.fastq.gz",
+	output:
+	# One of the most important directives. Outputs are heavily relied upon for the DAG
+		R1 = OUTDIR / "quality" / "{sample}_R1.fastq.gz",
+		R2 = OUTDIR / "quality" / "{sample}_R2.fastq.gz",
+		html = OUTDIR / "quality" / "{sample}.html",
+		json = OUTDIR / "quality" / "{sample}.json"	
+	# threads directive is optional but good-pratice to include
+	threads: 5
+	# conda directive - tells snakemake where to look for dependencies.
+	# makes pipelines super reproducible and deployable
+	conda: "envs/qc.yaml"
+	# shell directive, this is where all the work happens!
+	# Note that input and output wildcards (in this case {sample}) must match or snakemake will complain
+	shell:"""
+	fastp -i {input.R1} -I {input.R2} \
+	-o {output.R1} -O {output.R2} \
+	--thread {threads} \
+	--html {output.html} \
+	--json {output.json}
+	"""
+
+# inputs and outputs do not need to be named
+# but it does make things nicer as we will see below
+rule mutliqc:
+	message: "Running Multiqc"
+	# The input for this rule is the output of all the previous run
+	# We do this to ensure multiqc rule runs once all 'fastp' rules are completed
+	input:
+		expand(OUTDIR / "quality" / "{sample}.html", sample=SAMPLES)
+	output:
+		report = OUTDIR / "run_statistics.html"
+	params:
+		# this is actually the input for the multiqc rule
+		dir = OUTDIR / "quality"
+	threads: 1
+	conda: "envs/qc.yaml"
+	shell:"""
+	multiqc {params.dir} --filename {output.report}
+	"""
+
+rule index:
+	message: "Genearting BWA-MEM index for reference genome"
+	input:
+		REFERENCE_GENOME,
+	output:
+		index = expand(OUTDIR / "index" / "sc2.index.{ext}", ext = ['amb', 'ann', 'bwt', 'pac', 'sa']),
+	params:
+		name = OUTDIR / "index" / "sc2.index"
+	threads: 1
+	conda: "envs/consensus.yaml"
+	shell:"""
+	bwa index -p {params.name} {input} 
+	"""
+
+rule bwa:
+	message: "BWAMEM Mapping to {wildcards.sample}"
+	input:
+		R1 = rules.fastp.output.R1,
+		R2 = rules.fastp.output.R2,
+		index = expand(OUTDIR / "index" / "sc2.index.{ext}", ext = ['amb', 'ann', 'bwt', 'pac', 'sa'])
+	output:
+		sam = OUTDIR / "mapping" / "{sample}.sam",
+		bam = OUTDIR / "mapping" / "{sample}.bam",
+		bam_sorted = OUTDIR / "mapping" / "{sample}_sorted.bam",
+	threads: 4
+	conda: "envs/consensus.yaml"
+	params:
+		index = OUTDIR / "index" / "sc2.index"
+	shell:"""
+	bwa mem -t {threads} {params.index} {input.R1} {input.R2} > {output.sam}
+	samtools view -bS {output.sam} > {output.bam}
+	samtools sort {output.bam} > {output.bam_sorted}
+	"""
+
+rule trim_primers:
+	message: "Trimming amplicon primers using iVar"
+	input:
+		rules.bwa.output.bam_sorted,
+	output:
+		bam = OUTDIR / "trimmed" / "{sample}.trim.bam",
+		bam_sorted = OUTDIR / "trimmed" / "{sample}.trim.sorted.bam",
+	params:
+		min_qual = 15,
+		min_len = 50,
+		bed = BEDFILE,
+	conda: "envs/consensus.yaml"
+	threads: 1
+	shell:"""
+	touch {output.bam}
+	
+	ivar trim \
+	-i {input} \
+	-b {params.bed} \
+	-q {params.min_qual} \
+	-m {params.min_len} > {output.bam}
+
+	samtools sort {output.bam} > {output.bam_sorted}
+	"""
+
+rule consensus:
+	message: "Generating consensus sequence for {wildcards.sample}"
+	input:
+		rules.trim_primers.output.bam_sorted
+	output:
+		OUTDIR / "consensus" / "{sample}.fa"
+	params:
+		prefix = lambda w: OUTDIR / "consensus" / f"{w.sample}",
+		min_qual = 20,
+		min_insert = 0.80,
+		min_depth = 5,
+	threads: 1
+	conda: "envs/consensus.yaml"
+	shell:"""
+	samtools mpileup -aa -A -d 0 -Q 0 {input} \
+	| ivar consensus \
+	-q {params.min_qual} \
+	-m {params.min_depth} \
+	-c {params.min_insert} \
+	-p {params.prefix}
+	"""
+
+rule combine:
+	message: "Combining sequences with reference set"
+	input:
+		sequences = expand(OUTDIR / "consensus" / "{sample}.fa", sample=SAMPLES),
+		refset = BACKBONE
+	output:
+		sequences = OUTDIR / "phylogeny" / "all.fasta"
+	threads: 1
+	shell:"""
+	cat {input.sequences} {input.refset} > {output.sequences}
+	"""
+
+rule align:
+	message: "Aligning consensus sequences to reference set"
+	input:
+		sequences = rules.combine.output.sequences,
+	output:
+		OUTDIR / "phylogeny" / "aligned.fasta",
+	params:
+		reference_name = "MN908947.3"
+	threads: 5
+	conda: "envs/augur.yaml"
+	shell:"""
+	augur align \
+	--sequences {input.sequences} \
+	--output {output} \
+	--nthreads {threads} \
+	--reference-name {params.reference_name}
+	"""
+
+rule tree:
+	message: "Constructing phylogeny using IQTREE"
+	input:
+		rules.align.output
+	output:
+		OUTDIR / "phylogeny" / "tree.newick"
+	params:
+		model = "GTR",
+		bootstrap = "-alrt 1000 -B 1000"
+	threads: 5
+	conda: "envs/augur.yaml"
+	shell:"""
+	augur tree \
+	--alignment {input} \
+	--output {output} \
+	--substitution-model {params.model} \
+	--override-default-args \
+	--tree-builder-args={params.bootstrap:q}
+	"""
+
+rule plot_tree:
+	input:
+		OUTDIR / "phylogeny" / "tree.newick"
+	output:
+		OUTDIR / "phylogeny" / "plot.pdf"
+	shell:"""
+	Rscript plot_tree.R {input} {output}
+	"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
