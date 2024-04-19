@@ -110,10 +110,10 @@ Please complete the [survey located at this link.](https://forms.office.com/page
 | 10:00 am | Break                                        |                    |
 | 10:30 am | [Case study](https://raw.githubusercontent.com/bioinfo-training-philippines/bioinfo-training-philippines.github.io/main/presentations/Case_study.pdf)                                   |                    |
 | 12:30 pm | Lunch                                        |                    |
-| 01:30 pm | [Post-course quiz](https://forms.office.com/pages/responsepage.aspx?id=_BUzU5Dr2kCx3ER5UBsYezbQtPGY7QtFm0Ab78vNnbRUNVVNUFpJVzJZU1dMSzU0SjFMUDVYM0lNTi4u&origin=lprLink)                             |                    |
+| 01:30 pm | Post-course quiz                             |                    |
 | 02:30 pm | Open forum                                   |                    |
 | 03:30 pm | Break                                        |                    |
-| 04:00 pm | Course evaluation                            |                    |
+| 04:00 pm | [Course evaluation](https://forms.office.com/pages/responsepage.aspx?id=_BUzU5Dr2kCx3ER5UBsYezbQtPGY7QtFm0Ab78vNnbRUNVVNUFpJVzJZU1dMSzU0SjFMUDVYM0lNTi4u&origin=lprLink)                           |                    |
 | 04:30 pm | Awarding of certificates                     |                    |
 | 05:00 pm | Closing remarks                              | Rui Paulo de Jesus |
 
